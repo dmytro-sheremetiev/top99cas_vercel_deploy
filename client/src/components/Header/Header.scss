@@ -1,0 +1,29 @@
+@import "../../mixins";
+
+.header {
+  width: 100%;
+  // max-width: 1056px;
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  z-index: 1;
+
+  @include onMobile {
+    padding: 16px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    // width: calc(100% - 32px);
+  }
+}
+
+.logo {
+  font-family: "Abril Fatface";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #035ed8;
+  text-decoration: none;
+}

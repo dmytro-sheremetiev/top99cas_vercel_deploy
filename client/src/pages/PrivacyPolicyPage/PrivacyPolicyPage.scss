@@ -1,0 +1,33 @@
+@import "../../mixins";
+
+.privacy-policy {
+  margin-top: 50px;
+  @include onMobile {
+    margin-top: 115px;
+  }
+
+  &__content {
+    max-width: 100%;
+  }
+
+  &__title {
+    font-family: "Inter";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 0;
+  }
+
+  &__updated {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}

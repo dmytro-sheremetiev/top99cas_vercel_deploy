@@ -1,0 +1,243 @@
+@import "../../mixins";
+
+.profile {
+  padding: 8px 8px 8px 8px;
+  width: 96px;
+  height: 96px;
+  border-width: 0px 2px 2px 0px;
+  outline: none;
+  border-style: dashed;
+  border-color: rgba(32, 54, 143, 0.7);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include onMobile {
+    position: initial;
+  }
+
+  &::nth-child(n) {
+    box-sizing: border-box;
+  }
+
+  @media screen and (min-width: 224px) and (max-width: 319px) {
+    &:nth-child(2n) {
+      border-width: 0px 0px 2px 0px;
+    }
+
+    &:nth-child(n + 99) {
+      border-width: 0px 2px 0px 0px;
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 415px) {
+    &:nth-child(3n) {
+      border-width: 0px 0px 2px 0px;
+    }
+
+    &:nth-child(n + 97) {
+      border-width: 0px 2px 0px 0px;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  @media screen and (min-width: 416px) and (max-width: 511px) {
+    &:nth-child(4n) {
+      border-width: 0px 0px 2px 0px;
+    }
+
+    &:nth-child(n + 97) {
+      border-width: 0px 2px 0px 0px;
+    }
+  }
+
+  @media screen and (min-width: 512px) and (max-width: 607px) {
+    &:nth-child(5n) {
+      border-width: 0px 0px 2px 0px;
+    }
+
+    &:nth-child(n + 96) {
+      border-width: 0px 2px 0px 0px;
+    }
+  }
+
+  @media screen and (min-width: 608px) and (max-width: 703px) {
+    &:nth-child(6n) {
+      border-width: 0px 0px 2px 0px;
+    }
+
+    &:nth-child(n + 97) {
+      border-width: 0px 2px 0px 0px;
+    }
+  }
+
+  @media screen and (min-width: 704px) and (max-width: 799px) {
+    &:nth-child(7n) {
+      border-width: 0px 0px 2px 0px;
+    }
+
+    &:nth-child(n + 99) {
+      border-width: 0px 2px 0px 0px;
+    }
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 895px) {
+    &:nth-child(8n) {
+      border-width: 0px 0px 2px 0px;
+    }
+
+    &:nth-child(n + 97) {
+      border-width: 0px 2px 0px 0px;
+    }
+  }
+
+  @media screen and (min-width: 896px) and (max-width: 992px) {
+    &:nth-child(9n) {
+      border-width: 0px 0px 2px 0px;
+    }
+
+    &:nth-child(n + 91) {
+      border-width: 0px 2px 0px 0px;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    @include onDesktop {
+      &:nth-child(9n) > &__modal {
+        left: -358px;
+      }
+      &:nth-child(9n - 1) > &__modal {
+        left: -358px;
+      }
+      &:nth-child(9n - 2) > &__modal {
+        left: -358px;
+      }
+
+      &:nth-child(n + 81) > &__modal {
+        top: -170px;
+      }
+
+      &:nth-child(9n + 1) > &__modal {
+        left: 91px;
+      }
+      &:nth-child(9n + 2) > &__modal {
+        left: 91px;
+      }
+      &:nth-child(9n + 3) > &__modal {
+        left: 91px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 993px) and (max-width: 1087px) {
+    &:nth-child(10n) {
+      border-width: 0px 0px 2px 0px;
+    }
+
+    &:nth-child(10n) > &__modal {
+      left: -358px;
+    }
+    &:nth-child(10n - 1) > &__modal {
+      left: -358px;
+    }
+    &:nth-child(10n - 2) > &__modal {
+      left: -358px;
+    }
+
+    &:nth-child(n + 81) > &__modal {
+      top: -170px;
+    }
+
+    &:nth-child(n + 91) {
+      border-width: 0px 2px 0px 0px;
+    }
+    
+    &:nth-child(10n + 1) > &__modal {
+      left: 91px;
+    }
+    &:nth-child(10n + 2) > &__modal {
+      left: 91px;
+    }
+    &:nth-child(10n + 3) > &__modal {
+      left: 91px;
+    }
+  }
+
+  @media screen and (min-width: 1088px) {
+    &:nth-child(n + 89) {
+      border-width: 0px 2px 0px 0px;
+    }
+
+    &:nth-child(11n) {
+      border-width: 0px 0px 2px 0px;
+    }
+
+    &:nth-child(11n) > &__modal {
+      left: -358px;
+    }
+    &:nth-child(11n - 1) > &__modal {
+      left: -358px;
+    }
+    &:nth-child(11n - 2) > &__modal {
+      left: -358px;
+    }
+
+    &:nth-child(n + 78) > &__modal {
+      top: -170px;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    &:nth-child(11n + 1) > &__modal {
+      left: 91px;
+    }
+    &:nth-child(11n + 2) > &__modal {
+      left: 91px;
+    }
+    &:nth-child(11n + 3) > &__modal {
+      left: 91px;
+    }
+  }
+
+  &__photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  &__add {
+    width: 80px;
+    height: 80px;
+  }
+
+  &__modal {
+    position: absolute;
+    top: 88px;
+    z-index: 1;
+    width: 360px;
+    height: 192px;
+
+    @include onDesktop {
+      right: 91px;
+    }
+
+    @include onMobile {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

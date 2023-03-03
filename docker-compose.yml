@@ -1,0 +1,45 @@
+version: '3.4'
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1337
+    ports: 
+      - '5433:5433'
+    command: -p 5433
+    expose:
+      - '5433'
+    volumes:
+      - top99cas-db:/var/lib/postgresql/data
+  backend:
+    build: ./server
+    container_name: backend
+    environment:
+      - PORT=9000
+      - DB_HOST=postgres
+      - DB_PASSWORD=1337
+    ports:
+      - '9000:9000'
+    expose:
+      - '9000'
+    depends_on:
+      - postgres
+    links:
+      - postgres
+    volumes:
+      - ./server:/usr/src/app
+  frontend:
+    build: ./client
+    container_name: frontend
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:9000
+    ports:
+      - '3000:3000'
+    expose:
+      - '3000'
+    volumes:
+      - ./client:/usr/src/app
+volumes:
+  top99cas-db:

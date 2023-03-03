@@ -1,0 +1,10 @@
+{
+  "name": "top99cas",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "cd server && yarn && cd ../client && yarn && cd .. && docker compose up -d"
+  },
+  "author": "",
+  "license": "ISC"
+}

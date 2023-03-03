@@ -1,0 +1,38 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec 'node --es-module-specifier-resolution=node --loader=ts-node/esm' ./server.ts",
+    "pm2": "pm2 start processes.json --no-daemon"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@types/cors": "^2.8.13",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "pg": "^8.9.0",
+    "pg-hstore": "^2.3.4",
+    "pm2": "^5.2.2",
+    "sequelize": "^6.28.0",
+    "sequelize-cli": "^6.6.0",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
+  }
+}
