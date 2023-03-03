@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "cd server && yarn && cd ../client && yarn && cd .. && docker compose up -d"
+    "build": "cd server && yarn && cd ../client && yarn"
   },
   "author": "",
   "license": "ISC"
